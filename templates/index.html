@@ -1,0 +1,41 @@
+{% extends "layout.html" %} {% block body %}
+
+<div class="header">
+    <h1>Birthdays</h1>
+</div>
+
+<div class="container">
+    <div class="section">
+        <form action="/" method="post">
+            <div>
+                <label>
+                    <span>Enter your name:</span>
+                    <input type="text" name="name" autocomplete="off" autofocus required>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>Enter your birthday:</span>
+                    <input type="date" name="birthday" min="1900-01-01" max="2050-01-01" required valueAsNumber>
+                </label>
+            </div>
+
+            <input type="submit">
+        </form>
+    </div>
+    <div class="section">
+        {{ days }}
+        {{ weeks }}
+        <div class="week-table">
+            {% for week in range(weeks) %}
+
+            <div class="week"></div>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

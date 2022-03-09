@@ -1,0 +1,11 @@
+.week-table {
+  display: flex;
+  flex-wrap: wrap;
+}
+.week {
+  width: 5px;
+  height: 5px;
+  background-color: rgb(123, 222, 231);
+  margin: 3px;
+  border: 1px solid rgb(90, 176, 211);
+}
